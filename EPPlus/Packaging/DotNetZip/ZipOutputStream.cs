@@ -1386,7 +1386,7 @@ namespace OfficeOpenXml.Packaging.Ionic.Zip
             _FinishCurrentEntry();
             _currentEntry = ZipEntry.CreateForZipOutputStream(entryName);
             _currentEntry._container = new ZipContainer(this);
-            _currentEntry._BitField |= 0x0008;  // workitem 8932
+            //_currentEntry._BitField |= 0x0008;  // workitem 8932
             _currentEntry.SetEntryTimes(DateTime.Now, DateTime.Now, DateTime.Now);
             _currentEntry.CompressionLevel = this.CompressionLevel;
             _currentEntry.CompressionMethod = this.CompressionMethod;
